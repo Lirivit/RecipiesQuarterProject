@@ -3,29 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B5CC22CC82B79401E40B33 /* Pods_RecipiesQuarterProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C4DB100696E34629474E47 /* Pods_RecipiesQuarterProject.framework */; };
 		CE111442272AEFA100C82B4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE111441272AEFA100C82B4B /* AppDelegate.swift */; };
 		CE111444272AEFA100C82B4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE111443272AEFA100C82B4B /* SceneDelegate.swift */; };
 		CE111446272AEFA100C82B4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE111445272AEFA100C82B4B /* ViewController.swift */; };
-		CE111449272AEFA100C82B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE111447272AEFA100C82B4B /* Main.storyboard */; };
 		CE11144C272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE11144A272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodeld */; };
 		CE11144E272AEFA300C82B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE11144D272AEFA300C82B4B /* Assets.xcassets */; };
 		CE111451272AEFA300C82B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE11144F272AEFA300C82B4B /* LaunchScreen.storyboard */; };
+		CE111462272B190000C82B4B /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE111461272B190000C82B4B /* Api.swift */; };
+		CE1114642732ECF500C82B4B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1114632732ECF500C82B4B /* Recipe.swift */; };
+		CE11146627330DB100C82B4B /* RecipeResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11146527330DB100C82B4B /* RecipeResultViewModel.swift */; };
+		CE11146927330EFD00C82B4B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11146827330EFD00C82B4B /* Fonts.swift */; };
+		CE11146D2733161600C82B4B /* BeckyTahlia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11146C2733119B00C82B4B /* BeckyTahlia.ttf */; };
+		CE11146E2733161900C82B4B /* AovelSansRounded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11146B2733118800C82B4B /* AovelSansRounded.ttf */; };
+		CE9FA3E2273EE493003543E3 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3E1273EE493003543E3 /* RequestExecutor.swift */; };
+		CE9FA3E7273EE641003543E3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3E6273EE641003543E3 /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27C4DB100696E34629474E47 /* Pods_RecipiesQuarterProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipiesQuarterProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		310F9D25C8EF8D8A65C88EC7 /* Pods-RecipiesQuarterProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesQuarterProject.release.xcconfig"; path = "Target Support Files/Pods-RecipiesQuarterProject/Pods-RecipiesQuarterProject.release.xcconfig"; sourceTree = "<group>"; };
+		81A8BEE6E1DAEBAC4A076D73 /* Pods-RecipiesQuarterProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipiesQuarterProject.debug.xcconfig"; path = "Target Support Files/Pods-RecipiesQuarterProject/Pods-RecipiesQuarterProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CE11143E272AEFA100C82B4B /* RecipiesQuarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipiesQuarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE111441272AEFA100C82B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE111443272AEFA100C82B4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE111445272AEFA100C82B4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE111448272AEFA100C82B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE11144B272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipiesQuarterProject.xcdatamodel; sourceTree = "<group>"; };
 		CE11144D272AEFA300C82B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE111450272AEFA300C82B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE111452272AEFA300C82B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE111461272B190000C82B4B /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CE1114632732ECF500C82B4B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		CE11146527330DB100C82B4B /* RecipeResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultViewModel.swift; sourceTree = "<group>"; };
+		CE11146827330EFD00C82B4B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		CE11146B2733118800C82B4B /* AovelSansRounded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AovelSansRounded.ttf; sourceTree = "<group>"; };
+		CE11146C2733119B00C82B4B /* BeckyTahlia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeckyTahlia.ttf; sourceTree = "<group>"; };
+		CE9FA3E1273EE493003543E3 /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
+		CE9FA3E6273EE641003543E3 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B5CC22CC82B79401E40B33 /* Pods_RecipiesQuarterProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50C548A68DA5F48A9E848AC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27C4DB100696E34629474E47 /* Pods_RecipiesQuarterProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF4B40D2DDA12786447F5D0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81A8BEE6E1DAEBAC4A076D73 /* Pods-RecipiesQuarterProject.debug.xcconfig */,
+				310F9D25C8EF8D8A65C88EC7 /* Pods-RecipiesQuarterProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE111435272AEFA100C82B4B = {
 			isa = PBXGroup;
 			children = (
 				CE111440272AEFA100C82B4B /* RecipiesQuarterProject */,
 				CE11143F272AEFA100C82B4B /* Products */,
+				BF4B40D2DDA12786447F5D0E /* Pods */,
+				50C548A68DA5F48A9E848AC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +96,103 @@
 		CE111440272AEFA100C82B4B /* RecipiesQuarterProject */ = {
 			isa = PBXGroup;
 			children = (
-				CE111441272AEFA100C82B4B /* AppDelegate.swift */,
-				CE111443272AEFA100C82B4B /* SceneDelegate.swift */,
-				CE111445272AEFA100C82B4B /* ViewController.swift */,
-				CE111447272AEFA100C82B4B /* Main.storyboard */,
-				CE11144D272AEFA300C82B4B /* Assets.xcassets */,
-				CE11144F272AEFA300C82B4B /* LaunchScreen.storyboard */,
-				CE111452272AEFA300C82B4B /* Info.plist */,
+				CE11145D272B056F00C82B4B /* Services */,
+				CE11145C272B056800C82B4B /* Models */,
+				CE11145B272B055000C82B4B /* ViewModels */,
+				CE11145A272AFCAF00C82B4B /* Views */,
+				CE11145F272B058F00C82B4B /* ViewControlers */,
+				CE11146727330ED100C82B4B /* Extensions */,
+				CE11145E272B058600C82B4B /* Common */,
+				CE111460272B05D200C82B4B /* Supporting Files */,
 				CE11144A272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodeld */,
 			);
 			path = RecipiesQuarterProject;
+			sourceTree = "<group>";
+		};
+		CE11145A272AFCAF00C82B4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE11145B272B055000C82B4B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE11146527330DB100C82B4B /* RecipeResultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE11145C272B056800C82B4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE1114632732ECF500C82B4B /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE11145D272B056F00C82B4B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE111461272B190000C82B4B /* Api.swift */,
+				CE9FA3E1273EE493003543E3 /* RequestExecutor.swift */,
+				CE9FA3E6273EE641003543E3 /* RequestManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE11145E272B058600C82B4B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE111443272AEFA100C82B4B /* SceneDelegate.swift */,
+				CE111441272AEFA100C82B4B /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE11145F272B058F00C82B4B /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				CE111445272AEFA100C82B4B /* ViewController.swift */,
+			);
+			path = ViewControlers;
+			sourceTree = "<group>";
+		};
+		CE111460272B05D200C82B4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE9FA3E3273EE51C003543E3 /* Helpers */,
+				CE11146A2733117700C82B4B /* Custom Fonts */,
+				CE11144D272AEFA300C82B4B /* Assets.xcassets */,
+				CE111452272AEFA300C82B4B /* Info.plist */,
+				CE11144F272AEFA300C82B4B /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE11146727330ED100C82B4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE11146827330EFD00C82B4B /* Fonts.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE11146A2733117700C82B4B /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE11146C2733119B00C82B4B /* BeckyTahlia.ttf */,
+				CE11146B2733118800C82B4B /* AovelSansRounded.ttf */,
+			);
+			path = "Custom Fonts";
+			sourceTree = "<group>";
+		};
+		CE9FA3E3273EE51C003543E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE111455272AEFA300C82B4B /* Build configuration list for PBXNativeTarget "RecipiesQuarterProject" */;
 			buildPhases = (
+				082E398FB141BE15FBE5468C /* [CP] Check Pods Manifest.lock */,
 				CE11143A272AEFA100C82B4B /* Sources */,
 				CE11143B272AEFA100C82B4B /* Frameworks */,
 				CE11143C272AEFA100C82B4B /* Resources */,
+				FF5C7D28E5209FED1E23B043 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,36 +255,77 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE111451272AEFA300C82B4B /* LaunchScreen.storyboard in Resources */,
+				CE11146E2733161900C82B4B /* AovelSansRounded.ttf in Resources */,
+				CE11146D2733161600C82B4B /* BeckyTahlia.ttf in Resources */,
 				CE11144E272AEFA300C82B4B /* Assets.xcassets in Resources */,
-				CE111449272AEFA100C82B4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		082E398FB141BE15FBE5468C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecipiesQuarterProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF5C7D28E5209FED1E23B043 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipiesQuarterProject/Pods-RecipiesQuarterProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipiesQuarterProject/Pods-RecipiesQuarterProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecipiesQuarterProject/Pods-RecipiesQuarterProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE11143A272AEFA100C82B4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9FA3E2273EE493003543E3 /* RequestExecutor.swift in Sources */,
+				CE11146927330EFD00C82B4B /* Fonts.swift in Sources */,
 				CE111446272AEFA100C82B4B /* ViewController.swift in Sources */,
 				CE111442272AEFA100C82B4B /* AppDelegate.swift in Sources */,
 				CE11144C272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodeld in Sources */,
+				CE1114642732ECF500C82B4B /* Recipe.swift in Sources */,
+				CE9FA3E7273EE641003543E3 /* RequestManager.swift in Sources */,
+				CE111462272B190000C82B4B /* Api.swift in Sources */,
 				CE111444272AEFA100C82B4B /* SceneDelegate.swift in Sources */,
+				CE11146627330DB100C82B4B /* RecipeResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE111447272AEFA100C82B4B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE111448272AEFA100C82B4B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE11144F272AEFA300C82B4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,12 +455,13 @@
 		};
 		CE111456272AEFA300C82B4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81A8BEE6E1DAEBAC4A076D73 /* Pods-RecipiesQuarterProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LMTK7P8R74;
-				INFOPLIST_FILE = RecipiesQuarterProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RecipiesQuarterProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,18 +469,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillfokov.RecipiesQuarterProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CE111457272AEFA300C82B4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310F9D25C8EF8D8A65C88EC7 /* Pods-RecipiesQuarterProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LMTK7P8R74;
-				INFOPLIST_FILE = RecipiesQuarterProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RecipiesQuarterProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillfokov.RecipiesQuarterProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
