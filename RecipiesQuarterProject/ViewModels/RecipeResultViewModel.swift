@@ -10,21 +10,36 @@ import RxSwift
 import RxCocoa
 
 // View Model for recipe results model
-struct RecipeResultViewModel {
+class RecipeResultViewModel {
     // Dispose bag
     private let disposeBag = DisposeBag()
     // Request manager
-    private let requestManger = RequestManager()
+    private let requestManager: RequestManagerProtocol
     // Fetched recipes
     private let recipes = BehaviorRelay<[RecipeResult]>(value: [])
     // Recipes observer for a view
     var recipesObserver: Observable<[RecipeResult]> {
         return recipes.asObservable()
     }
-    
+    // Init
+    init(requestManager: RequestManagerProtocol = RequestManager()) {
+        self.requestManager = requestManager
+    }
     // Search for recipes
     func searchRecipes(numberOfRecipes: Int, page: Int) {
-        let result = requestManger.requestRecipes(request: NetworkRequest(httpMethod: .get, endpoint: .recipesSearch), key: Constants.apiKey, numberOfRecipes: numberOfRecipes, page: page)
+        
+        let params: [String: Any] = [
+            "apiKey": Constants.apiKey,
+            "number": numberOfRecipes,
+            "offset": page
+        ]
+        
+        let request = NetworkRequest(httpMethod: .get,
+                                     endpoint: .recipesSearch,
+                                     parameters: params,
+                                     headers: Constants.headers)
+        
+        let result = requestManager.requestRecipes(request: request)
         
         result.subscribe(onNext: { value in
             self.recipes.accept(value.results)
@@ -34,6 +49,5 @@ struct RecipeResultViewModel {
             })
             print(error.localizedDescription)
         }).disposed(by: disposeBag)
-
     }
 }

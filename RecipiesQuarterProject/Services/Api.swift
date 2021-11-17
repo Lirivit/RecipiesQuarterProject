@@ -10,6 +10,7 @@ import Alamofire
 
 public struct Constants {
     static let apiKey = "44e1e5ba948a42009e5e034bdc5cb3ea"
+    static let headers = ["Content-Type" : "application/json"]
 }
 
 enum RequestError: Error {
@@ -30,7 +31,8 @@ enum Endpoint {
 struct NetworkRequest {
     let httpMethod: HTTPMethod
     let endpoint: Endpoint
-    var headers: [String: String] = ["Content-Type" : "application/json"]
+    var parameters: [String: Any] = [:]
+    var headers: [String: String]
 }
 
 

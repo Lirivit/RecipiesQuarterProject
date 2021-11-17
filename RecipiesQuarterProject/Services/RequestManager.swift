@@ -8,19 +8,15 @@
 import Foundation
 import RxSwift
 
-struct RequestManager {
+protocol RequestManagerProtocol {
+    func requestRecipes(request: NetworkRequest) -> Observable<RecipesResults>
+}
+
+class RequestManager: RequestExecutor, RequestManagerProtocol {
     
-    private let client = RequestExecutor.client
-    
-    func requestRecipes(request: NetworkRequest, key: String, numberOfRecipes: Int, page: Int) -> Observable<RecipesResults> {
+    func requestRecipes(request: NetworkRequest) -> Observable<RecipesResults> {
         
-        let params: [String: Any] = [
-            "apiKey": key,
-            "number": numberOfRecipes,
-            "offset": page
-        ]
-        
-        let result: Observable<RecipesResults> = client.executeRequest(request: request, params: params)
+        let result: Observable<RecipesResults> = executeRequest(request: request)
         
         return result
     }

@@ -13,15 +13,18 @@ private struct Environment {
     static let baseURL: String = "https://api.spoonacular.com"
 }
 
-struct RequestExecutor {
+protocol RequestExecutorProtocol {
+    func executeRequest<T: Codable>(request: NetworkRequest) -> Observable<T>
+    func createRequest(request: NetworkRequest) -> URLRequest?
+}
+
+class RequestExecutor: RequestExecutorProtocol {
     
-    static let client = RequestExecutor()
-    
-    func executeRequest<T: Codable>(request: NetworkRequest, params: [String: Any]) -> Observable<T> {
+    func executeRequest<T: Codable>(request: NetworkRequest) -> Observable<T> {
         
         return Observable<T>.create { observer in
             
-            guard let request = createRequest(request: request, params: params) else {
+            guard let request = self.createRequest(request: request) else {
                 observer.onError(RequestError.incorrectURL)
                 return Disposables.create()
             }
@@ -45,11 +48,11 @@ struct RequestExecutor {
         }
     }
     
-    private func createRequest(request: NetworkRequest, params: [String: Any]) -> URLRequest? {
+    func createRequest(request: NetworkRequest) -> URLRequest? {
         var components = URLComponents(string: Environment.baseURL + request.endpoint.route)
         
-        if !params.isEmpty {
-            let queryItems = params.map {
+        if !request.parameters.isEmpty {
+            let queryItems = request.parameters.map {
                 URLQueryItem(name: $0, value: "\($1)")
             }
             components?.queryItems = queryItems
@@ -64,7 +67,7 @@ struct RequestExecutor {
         urlRequest.httpMethod = request.httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = request.headers
         
-        //        print(components?.url?.absoluteString)
+//        print(components?.url?.absoluteString)
         return urlRequest
     }
 }

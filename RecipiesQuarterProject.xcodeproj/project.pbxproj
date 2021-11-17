@@ -10,7 +10,6 @@
 		28B5CC22CC82B79401E40B33 /* Pods_RecipiesQuarterProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C4DB100696E34629474E47 /* Pods_RecipiesQuarterProject.framework */; };
 		CE111442272AEFA100C82B4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE111441272AEFA100C82B4B /* AppDelegate.swift */; };
 		CE111444272AEFA100C82B4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE111443272AEFA100C82B4B /* SceneDelegate.swift */; };
-		CE111446272AEFA100C82B4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE111445272AEFA100C82B4B /* ViewController.swift */; };
 		CE11144C272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE11144A272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodeld */; };
 		CE11144E272AEFA300C82B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE11144D272AEFA300C82B4B /* Assets.xcassets */; };
 		CE111451272AEFA300C82B4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE11144F272AEFA300C82B4B /* LaunchScreen.storyboard */; };
@@ -22,6 +21,13 @@
 		CE11146E2733161900C82B4B /* AovelSansRounded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11146B2733118800C82B4B /* AovelSansRounded.ttf */; };
 		CE9FA3E2273EE493003543E3 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3E1273EE493003543E3 /* RequestExecutor.swift */; };
 		CE9FA3E7273EE641003543E3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3E6273EE641003543E3 /* RequestManager.swift */; };
+		CE9FA3EB273FF200003543E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3EA273FF200003543E3 /* MainViewController.swift */; };
+		CE9FA3ED273FF369003543E3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3EC273FF369003543E3 /* MainView.swift */; };
+		CE9FA3EF2742EC7B003543E3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3EE2742EC7A003543E3 /* TabBarViewController.swift */; };
+		CE9FA3F12742F1F4003543E3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3F02742F1F4003543E3 /* FavoritesViewController.swift */; };
+		CE9FA3F32742F217003543E3 /* VegeteriansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3F22742F217003543E3 /* VegeteriansViewController.swift */; };
+		CE9FA3F52742F228003543E3 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA3F42742F228003543E3 /* DrinksViewController.swift */; };
+		CEADE14A2743F89A00AF5ABE /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADE1492743F89A00AF5ABE /* MainCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +37,6 @@
 		CE11143E272AEFA100C82B4B /* RecipiesQuarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipiesQuarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE111441272AEFA100C82B4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE111443272AEFA100C82B4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE111445272AEFA100C82B4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE11144B272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipiesQuarterProject.xcdatamodel; sourceTree = "<group>"; };
 		CE11144D272AEFA300C82B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE111450272AEFA300C82B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +49,13 @@
 		CE11146C2733119B00C82B4B /* BeckyTahlia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeckyTahlia.ttf; sourceTree = "<group>"; };
 		CE9FA3E1273EE493003543E3 /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
 		CE9FA3E6273EE641003543E3 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		CE9FA3EA273FF200003543E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CE9FA3EC273FF369003543E3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE9FA3EE2742EC7A003543E3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE9FA3F02742F1F4003543E3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		CE9FA3F22742F217003543E3 /* VegeteriansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegeteriansViewController.swift; sourceTree = "<group>"; };
+		CE9FA3F42742F228003543E3 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
+		CEADE1492743F89A00AF5ABE /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 		CE11145A272AFCAF00C82B4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEADE14B2743FDE700AF5ABE /* MainView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,7 +167,11 @@
 		CE11145F272B058F00C82B4B /* ViewControlers */ = {
 			isa = PBXGroup;
 			children = (
-				CE111445272AEFA100C82B4B /* ViewController.swift */,
+				CE9FA3EA273FF200003543E3 /* MainViewController.swift */,
+				CE9FA3EE2742EC7A003543E3 /* TabBarViewController.swift */,
+				CE9FA3F02742F1F4003543E3 /* FavoritesViewController.swift */,
+				CE9FA3F22742F217003543E3 /* VegeteriansViewController.swift */,
+				CE9FA3F42742F228003543E3 /* DrinksViewController.swift */,
 			);
 			path = ViewControlers;
 			sourceTree = "<group>";
@@ -193,6 +210,15 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEADE14B2743FDE700AF5ABE /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				CE9FA3EC273FF369003543E3 /* MainView.swift */,
+				CEADE1492743F89A00AF5ABE /* MainCollectionViewCell.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,14 +336,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9FA3F12742F1F4003543E3 /* FavoritesViewController.swift in Sources */,
 				CE9FA3E2273EE493003543E3 /* RequestExecutor.swift in Sources */,
+				CE9FA3ED273FF369003543E3 /* MainView.swift in Sources */,
+				CEADE14A2743F89A00AF5ABE /* MainCollectionViewCell.swift in Sources */,
+				CE9FA3EB273FF200003543E3 /* MainViewController.swift in Sources */,
 				CE11146927330EFD00C82B4B /* Fonts.swift in Sources */,
-				CE111446272AEFA100C82B4B /* ViewController.swift in Sources */,
+				CE9FA3EF2742EC7B003543E3 /* TabBarViewController.swift in Sources */,
 				CE111442272AEFA100C82B4B /* AppDelegate.swift in Sources */,
 				CE11144C272AEFA100C82B4B /* RecipiesQuarterProject.xcdatamodeld in Sources */,
 				CE1114642732ECF500C82B4B /* Recipe.swift in Sources */,
 				CE9FA3E7273EE641003543E3 /* RequestManager.swift in Sources */,
+				CE9FA3F32742F217003543E3 /* VegeteriansViewController.swift in Sources */,
 				CE111462272B190000C82B4B /* Api.swift in Sources */,
+				CE9FA3F52742F228003543E3 /* DrinksViewController.swift in Sources */,
 				CE111444272AEFA100C82B4B /* SceneDelegate.swift in Sources */,
 				CE11146627330DB100C82B4B /* RecipeResultViewModel.swift in Sources */,
 			);
@@ -462,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LMTK7P8R74;
 				INFOPLIST_FILE = "$(SRCROOT)/RecipiesQuarterProject/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LMTK7P8R74;
 				INFOPLIST_FILE = "$(SRCROOT)/RecipiesQuarterProject/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
