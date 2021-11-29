@@ -16,16 +16,26 @@ class TabBarViewController: UITabBarController {
     }
     
     private func setup() {
-        // MARK: - Main View Controller
-        let recipeResultViewModel = RecipeResultViewModel()
+//        // MARK: - Main View Controller
+//        let recipeResultViewModel = RecipeResultViewModel()
+//
+//        let mainViewController = MainViewController(viewModel: recipeResultViewModel)
+//        mainViewController.tabBarItem = UITabBarItem(title: "Home",
+//                                                     image: UIImage(systemName: "star"),
+//                                                     tag: 0)
+//
+//        let mainNavigationController = UINavigationController(rootViewController: mainViewController)
         
-        let mainViewController = MainViewController(viewModel: recipeResultViewModel)
-        mainViewController.tabBarItem = UITabBarItem(title: "Home",
-                                                     image: UIImage(systemName: "star"),
-                                                     tag: 0)
+        // MARK: - Search Recipes View Controller
+        let searchRecipesViewModel = SearchRecipesViewModel()
         
-        let mainNavigationController = UINavigationController(rootViewController: mainViewController)
+        let searchRecipesViewController = SearchRecipesViewController(viewModel: searchRecipesViewModel)
+        searchRecipesViewController.tabBarItem = UITabBarItem(title: "Search",
+                                                              image: UIImage(systemName: "star"), tag: 0)
         
+        let searchRecipesNavigationViewController = UINavigationController(rootViewController: searchRecipesViewController)
+        
+        searchRecipesViewController.title = "Home"
         // MARK: - Favorites View Controller
         let favoritesViewController = FavoritesViewController()
         favoritesViewController.tabBarItem = UITabBarItem(title: "Favorite",
@@ -34,6 +44,7 @@ class TabBarViewController: UITabBarController {
         
         let favoritesNavigationController = UINavigationController(rootViewController: favoritesViewController)
         
+        favoritesViewController.title = "Favorite"
         // MARK: - Vegeterians View Controller
         let vegeteriansViewController = VegeteriansViewController()
         vegeteriansViewController.tabBarItem = UITabBarItem(title: "Vegeterian",
@@ -42,6 +53,7 @@ class TabBarViewController: UITabBarController {
         
         let vegeteriansNavigationController = UINavigationController(rootViewController: vegeteriansViewController)
         
+        vegeteriansViewController.title = "Vegeterian"
         // MARK: - Drinks View Controller
         let drinksViewController = DrinksViewController()
         drinksViewController.tabBarItem = UITabBarItem(title: "Drinks",
@@ -50,19 +62,17 @@ class TabBarViewController: UITabBarController {
         
         let drinksNavigationController = UINavigationController(rootViewController: drinksViewController)
         
-//        self.tabBar.tintColor = .white
+        drinksViewController.title = "Drinks"
+        // MARK: - Tab Bar Setup
         self.tabBar.backgroundColor = .white
-//        self.tabBar.barTintColor = .white
         
         self.viewControllers = [
-            mainNavigationController,
+            searchRecipesNavigationViewController,
             favoritesNavigationController,
             vegeteriansNavigationController,
             drinksNavigationController
         ]
         
-        self.selectedViewController = mainNavigationController
-        
-        
+        self.selectedViewController = searchRecipesNavigationViewController
     }
 }

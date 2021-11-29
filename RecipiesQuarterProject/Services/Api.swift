@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 public struct Constants {
-    static let apiKey = "44e1e5ba948a42009e5e034bdc5cb3ea"
+    static let apiKey = "f1354e3f480d459ca0752b557c9edcd9"
     static let headers = ["Content-Type" : "application/json"]
 }
 
@@ -19,11 +19,14 @@ enum RequestError: Error {
 
 enum Endpoint {
     case recipesSearch
+    case singleRecipeInfo(recipeId: Int)
     
     var route: String {
         switch self {
         case .recipesSearch:
             return "/recipes/complexSearch"
+        case .singleRecipeInfo(let recipeId):
+            return "/recipes/\(recipeId)/information"
         }
     }
 }

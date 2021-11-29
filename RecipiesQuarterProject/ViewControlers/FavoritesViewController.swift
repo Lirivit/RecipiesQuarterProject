@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
-class FavoritesViewController: UIViewController {
-
+class FavoritesViewController: RecipesListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }

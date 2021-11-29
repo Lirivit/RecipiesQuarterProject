@@ -17,20 +17,73 @@ class RecipeResultViewModel {
     private let requestManager: RequestManagerProtocol
     // Fetched recipes
     private let recipes = BehaviorRelay<[RecipeResult]>(value: [])
-    // Recipes observer for a view
-    var recipesObserver: Observable<[RecipeResult]> {
-        return recipes.asObservable()
-    }
+    // Search bar text subject for a view
+    private let searchBarSubject = PublishSubject<String>()
+    // Search bar tap subject
+    private let searchTapSubject = PublishSubject<Void>()
     // Init
     init(requestManager: RequestManagerProtocol = RequestManager()) {
         self.requestManager = requestManager
     }
-    // Search for recipes
-    func searchRecipes(numberOfRecipes: Int, page: Int) {
+    
+    func transform(_ input: Input) -> Output {
+        bindTextToSearchBarSubject(input)
+        handleSearchTap(input)
         
+        return Output(searchBarText: searchBarText,
+                      collectionViewObserver: recipesObserver,
+                      searchTapped: searchTapObserver)
+    }
+    
+}
+
+// MARK: - View Model Bindings
+extension RecipeResultViewModel {
+    struct Input {
+        let searchBarText: Observable<String>
+        let searchTapped: ControlEvent<Void>
+    }
+    
+    struct Output {
+        let searchBarText: Driver<String>
+        let collectionViewObserver: Driver<[RecipeResult]>
+        let searchTapped: Driver<Void>
+    }
+}
+
+// MARK: - View Model Helpers
+extension RecipeResultViewModel {
+    private var searchBarText: Driver<String> {
+        searchBarSubject.asDriver(onErrorJustReturn: "") // TODO: - Change to do on error
+    }
+    
+    private var searchTapObserver: Driver<Void> {
+        searchTapSubject.asDriver(onErrorDriveWith: Driver.never())
+    }
+    
+    private var recipesObserver: Driver<[RecipeResult]> {
+        return recipes.asDriver(onErrorJustReturn: []) // TODO: - Change to do on error
+    }
+    
+    private func bindTextToSearchBarSubject(_ input: Input) {
+        input.searchBarText.subscribe(searchBarSubject).disposed(by: disposeBag)
+    }
+    
+    private func handleSearchTap(_ input: Input) {
+        let result = input.searchTapped.withLatestFrom(Observable.just(input.searchBarText))
+            .share()
+        
+        result.map{ _ in }.subscribe(searchTapSubject).disposed(by: disposeBag)
+    }
+}
+
+// MARK: - View Model Requests
+extension RecipeResultViewModel {
+    // Search for recipes
+    func searchRecipes(page: Int) {
         let params: [String: Any] = [
             "apiKey": Constants.apiKey,
-            "number": numberOfRecipes,
+            "number": 10,
             "offset": page
         ]
         
