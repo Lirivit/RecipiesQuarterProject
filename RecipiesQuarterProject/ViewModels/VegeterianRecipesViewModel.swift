@@ -1,15 +1,15 @@
 //
-//  SearchRecipesViewModel.swift
+//  VegeterianRecipesViewModel.swift
 //  RecipiesQuarterProject
 //
-//  Created by Kirill Fokov on 20.11.2021.
+//  Created by Kirill Fokov on 22.12.2021.
 //
 
 import Foundation
 import RxSwift
 import RxCocoa
 
-class SearchRecipesViewModel {
+class VegeterianRecipesViewModel {
     // Request manager
     private let requestManager: RequestManagerProtocol
     // Dispose bag
@@ -45,7 +45,7 @@ class SearchRecipesViewModel {
     }
 }
 // MARK: - View Model Bindings
-extension SearchRecipesViewModel {
+extension VegeterianRecipesViewModel {
     struct Input {
         let searchText: Observable<String>
         let tableViewPagination: ControlEvent<WillDisplayCellEvent>
@@ -60,7 +60,7 @@ extension SearchRecipesViewModel {
     }
 }
 // MARK: - View Model Helpers
-extension SearchRecipesViewModel {
+extension VegeterianRecipesViewModel {
     private var recipesObserver: Driver<[RecipeResult]> {
         return recipes.asDriver(onErrorJustReturn: []) // TODO: - Remove on just error
     }
@@ -83,7 +83,6 @@ extension SearchRecipesViewModel {
     
     private func handleTableViewScroll(_ input: Input) {
         input.tableViewPagination.asDriver().drive(onNext: { [unowned self] cell, indexPath in
-            
             if indexPath.row == recipesOffset.value + 19 {
                 recipesOffset.accept(recipesOffset.value + 20)
                 searchRecipes(query: self.searchBarRelay.value)
@@ -119,13 +118,14 @@ extension SearchRecipesViewModel {
     }
 }
 // MARK: - View Model Requests
-extension SearchRecipesViewModel {
+extension VegeterianRecipesViewModel {
     func searchRecipes(query: String) {
         let params: [String: Any] = [
             "apiKey": Constants.apiKey,
             "query": query,
             "number": 20,
-            "offset": recipesOffset.value
+            "offset": recipesOffset.value,
+            "diet": "vegetarian"
         ]
         
         let request = NetworkRequest(httpMethod: .get,

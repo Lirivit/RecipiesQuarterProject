@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RecipeCoreData" representedClassName="RecipeCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="dairyFree" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="glutenFree" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="vegan" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="vegetarian" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="veryHealthy" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="veryPopular" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RecipeIngredientCoreData"/>
+    </entity>
+    <entity name="RecipeIngredientCoreData" representedClassName="RecipeIngredientCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="unit" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="RecipeCoreData" positionX="-63" positionY="-18" width="128" height="179"/>
+        <element name="RecipeIngredientCoreData" positionX="-36" positionY="72" width="128" height="104"/>
+    </elements>
+</model>

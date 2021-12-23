@@ -38,6 +38,7 @@ class RequestExecutor: RequestExecutorProtocol {
                             observer.onNext(result)
                         }
                     } catch let parseError {
+                        print(parseError)
                         observer.onError(parseError)
                     }
                     
@@ -66,8 +67,6 @@ class RequestExecutor: RequestExecutorProtocol {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = request.headers
-        
-//        print(components?.url?.absoluteString)
         return urlRequest
     }
 }

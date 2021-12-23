@@ -9,12 +9,14 @@ import Foundation
 import Alamofire
 
 public struct Constants {
-    static let apiKey = "f1354e3f480d459ca0752b557c9edcd9"
+    static let apiKey = "44e1e5ba948a42009e5e034bdc5cb3ea"
     static let headers = ["Content-Type" : "application/json"]
 }
 
 enum RequestError: Error {
     case incorrectURL
+    case appDelegateError
+    case coreDataFetchError
 }
 
 enum Endpoint {

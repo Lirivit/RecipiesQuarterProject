@@ -10,16 +10,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let viewController = TabBarViewController()
-//        let navigationController = UINavigationController(rootViewController: viewController)
-        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.overrideUserInterfaceStyle = .light
         window?.windowScene = windowScene
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
@@ -53,7 +50,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 

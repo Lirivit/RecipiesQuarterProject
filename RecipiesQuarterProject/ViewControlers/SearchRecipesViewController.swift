@@ -26,34 +26,41 @@ class SearchRecipesViewController: RecipesListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchRecipesViewModel.searchRecipes(query: "")
+        recipesListTableView.dataSource = nil
+        recipesListTableView.delegate = nil
         bindUI()
+        setupView()
+        searchRecipesViewModel.searchRecipes(query: "")
     }
     
     private func bindUI() {
         let output = searchRecipesViewModel.transform(SearchRecipesViewModel.Input(
             searchText: searchBar.rx.text.orEmpty.throttle(.seconds(1), scheduler: MainScheduler.instance),
-            tableViewPagination: recipesListTableView.rx.willDisplayCell, tableViewSelectedItem: recipesListTableView.rx.modelSelected(RecipeResult.self)))
+            tableViewPagination: recipesListTableView.rx.willDisplayCell,
+            tableViewSelectedItem: recipesListTableView.rx.modelSelected(RecipeResult.self),
+            searchBarDoneButton: searchBar.rx.searchButtonClicked))
         
         output.recipesObserver
             .map { $0 }
             .drive(recipesListTableView.rx.items(cellIdentifier: RecipesListTableViewCell.cellIdentifier, cellType: RecipesListTableViewCell.self)) { row, data, cell in
+                
                 cell.configure(recipeLabel: data.title, recipeImage: data.image)
             }.disposed(by: disposeBag)
         
         output.recipeObserver.drive(onNext: { [unowned self] id in
             self.pushRecipeViewController(id: id)
         }).disposed(by: disposeBag)
+        
+        output.searchBarDoneButtonObserver.drive(onNext: {
+            self.searchBar.endEditing(true)
+        }).disposed(by: disposeBag)
     }
     
     private func pushRecipeViewController(id: Int) {
-        let viewModel = RecipeViewModel()
+        let viewModel = RecipeViewModel(id: id)
         
-        let recipeViewController = RecipeViewController(viewModel: viewModel, id: id)
+        let recipeViewController = RecipeViewController(viewModel: viewModel)
         
         navigationController?.pushViewController(recipeViewController, animated: true)
     }
 }
-
-//extension SearchRecipesViewController: UITableViewDelegate {
-//}

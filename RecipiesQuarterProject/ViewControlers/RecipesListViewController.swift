@@ -12,21 +12,12 @@ class RecipesListViewController: UIViewController {
     lazy var searchBar: UISearchBar = UISearchBar()
     // Recipes Table View
     lazy var recipesListTableView: UITableView = UITableView()
-    
-    override func loadView() {
-        super.loadView()
-        
-        // Setup View
-        setupView()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 // MARK: - UI Setup
 extension RecipesListViewController {
-    private func setupView() {
+    func setupView() {
+        tabBarController?.tabBar.isHidden = false
+        
         searchBar.searchBarStyle = UISearchBar.Style.default
         searchBar.placeholder = "Search..."
         searchBar.sizeToFit()

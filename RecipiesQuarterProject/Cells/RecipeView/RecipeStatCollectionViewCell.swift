@@ -29,6 +29,7 @@ class RecipeStatCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .modern(16)
         label.numberOfLines = 0
+        label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
         label.textColor = .black
         return label
